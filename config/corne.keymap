@@ -125,7 +125,7 @@
       >;
     };
 
-    app_layer {
+    win_layer {
       label = "Win";
       bindings = <  
       
