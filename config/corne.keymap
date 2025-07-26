@@ -67,8 +67,8 @@
          */
         grs: grs {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp ESC>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
@@ -79,11 +79,11 @@
          */
         esc_layer_combo: esc_layer_combo {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             flavor = "tap-preferred";         // приоритет тапа над удержанием
             tapping-term-ms = <200>;          // окно времени для тапа
             quick-tap-ms = <150>;             // ускоренный повтор
-            bindings = <&mo>, <&grs>;
+            bindings = <&mo APP>, <&grs GRAVE ESC>;
         };
         
         /* Модификаторы для домашнего ряда (HOMEROW) */
@@ -127,7 +127,7 @@
         default_layer {
             label = "Default";
             bindings = <
-                &esc_layer_combo APP 0                  &kp Q          &kp W        &kp E   &kp R   &kp T         &kp Y        &kp U      &kp I         &kp O      &kp P             &kp LBKT
+                &esc_layer_combo       &kp Q          &kp W        &kp E   &kp R   &kp T         &kp Y        &kp U      &kp I         &kp O      &kp P             &kp LBKT
                 &kp TAB                &hm LSHFT A    &kp S        &kp D   &kp F   &kp G         &kp H        &kp J      &kp K         &kp L      &hm RSHFT SEMI    &kp APOS
                 &hm LCTRL LC(LA(A))    &hm LCTRL Z    &kp X        &kp C   &kp V   &kp B         &kp N        &kp M      &kp COMMA     &kp DOT    &mt BSLH FSLH     &kp RBKT
                                        &hm LALT LG(LA(N1))       &hm LGUI SPACE   &ltp LNUM LG(LA(N2))       &hm RSHFT ENTER   &lhp NUM BSPC     &ltp FN DEL
