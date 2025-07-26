@@ -77,14 +77,14 @@
          * - Tap → вызывает grave_or_esc (то есть GRAVE или ESC в зависимости от CMD)
          * - Hold → активирует слой APP
          */
-        esc_layer_combo: esc_layer_combo {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "tap-preferred";         // приоритет тапа над удержанием
-            tapping-term-ms = <200>;          // окно времени для тапа
-            quick-tap-ms = <150>;             // ускоренный повтор
-            bindings = <&mo>, <&grave_or_esc>;
-        };
+        // esc_layer_combo: esc_layer_combo {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <0>;
+        //     flavor = "tap-preferred";         // приоритет тапа над удержанием
+        //     tapping-term-ms = <200>;          // окно времени для тапа
+        //     quick-tap-ms = <150>;             // ускоренный повтор
+        //     bindings = <&ltp APP &grave_or_esc>;
+        // };
         
         /* Модификаторы для домашнего ряда (HOMEROW) */
         hm: homerow_mods {
@@ -97,16 +97,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        /* Модификаторы для домашнего ряда без быстрого тапа */
-        hmt: homerow_mods_no_quicktap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
 
         /* Приоритет тапа для переключения слоёв */
         ltp: layer_tap_prefered {
@@ -137,7 +127,7 @@
         default_layer {
             label = "Default";
             bindings = <
-                &esc_layer_combo APP                &kp Q          &kp W        &kp E   &kp R   &kp T         &kp Y        &kp U      &kp I         &kp O      &kp P             &kp LBKT
+                &ltp APP &grave_or_esc                &kp Q          &kp W        &kp E   &kp R   &kp T         &kp Y        &kp U      &kp I         &kp O      &kp P             &kp LBKT
                 &kp TAB                &hm LSHFT A    &kp S        &kp D   &kp F   &kp G         &kp H        &kp J      &kp K         &kp L      &hm RSHFT SEMI    &kp APOS
                 &hm LCTRL LC(LA(A))    &hm LCTRL Z    &kp X        &kp C   &kp V   &kp B         &kp N        &kp M      &kp COMMA     &kp DOT    &mt BSLH FSLH     &kp RBKT
                                        &hm LALT LG(LA(N1))       &hm LGUI SPACE   &ltp LNUM LG(LA(N2))       &hm RSHFT ENTER   &lhp NUM BSPC     &ltp FN DEL
