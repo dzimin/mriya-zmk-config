@@ -23,8 +23,8 @@
 
 / {
     combos {
-        // label = "Combos for Caps Word";
-        // compatible = "zmk,combos";
+        label = "Combos for Caps Word";
+        compatible = "zmk,combos";
         // /* Комбо для клавиш F и J, теперь включает Caps Word */
         // combo_capslock_fj {
         //     timeout-ms = <50>;
