@@ -67,8 +67,8 @@
          */
         grs: grs {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp ESC>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
@@ -83,7 +83,7 @@
             flavor = "tap-preferred";         // приоритет тапа над удержанием
             tapping-term-ms = <200>;          // окно времени для тапа
             quick-tap-ms = <150>;             // ускоренный повтор
-            bindings = <&mo APP>, <&grs GRAVE ESC>;
+            bindings = <&mo APP>, <&grs>;
         };
         
         /* Модификаторы для домашнего ряда (HOMEROW) */
