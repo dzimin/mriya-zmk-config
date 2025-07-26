@@ -43,7 +43,7 @@
 
     behaviors {
 
-      /* Поведение для Tap Dance на левой руке 
+      /* Поведение для Tap Dance на левой руке */
       lnum_mod_combo: lnum_mod_combo {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -51,7 +51,7 @@
             bindings = <&ltp LNUM LC(LA(N2))>, <&kp LC(LA(N1))>;
 
         };
-      */
+      
         /* Модификатор для клавиши Grave/Escape */
         graves: grave_escape {
             compatible = "zmk,behavior-mod-morph";
