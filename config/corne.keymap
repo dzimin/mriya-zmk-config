@@ -83,7 +83,7 @@
             flavor = "tap-preferred";         // приоритет тапа над удержанием
             tapping-term-ms = <200>;          // окно времени для тапа
             quick-tap-ms = <150>;             // ускоренный повтор
-            bindings = <&mo APP &grave_or_esc>;
+            bindings = <&mo APP>, <&grave_or_esc>;
         };
         
         /* Модификаторы для домашнего ряда (HOMEROW) */
