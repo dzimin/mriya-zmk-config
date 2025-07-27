@@ -27,8 +27,8 @@
     grave_escape: grave_escape {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp ESC>, <&kp GRAVE>;
-      mods = <(MOD_LGUI|MOD_RGUI)>;
+      bindings = <&kp GRAVE>, <&kp ESC>;
+      mods = <(MOD_LGUI)>;
     };
       
     hm: homerow_mods {
