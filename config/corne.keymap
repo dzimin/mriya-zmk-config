@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ltp APP GRAVE>, <&kp ESC>;
-            mods = <MOD_LGU>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
       
         /* Модификаторы для домашнего ряда (HOMEROW) */
